@@ -19,9 +19,9 @@ timezone: Asia/Kuala_Lumpur
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Aggy's collection                         # the main title
+title: Aggy's portfolio                        # the main title
 
-tagline: Collection of projects and own documentations   # it will display as the sub-title
+tagline: Collection of works I have done and things I have learnt   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.

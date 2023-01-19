@@ -1,13 +1,13 @@
 ---
-title: Linear Programing 
-date: 2021-01-15
+title: Linear Programing - Investment Problem 
+date: 2021-03-15
 categories: [Assignment]
 math: true
 ---
 
 
 
-## Problem 1 - Investment Problem 
+## Investment Problem 
 
 - A company has scheduled the construction of new plant 5, 10, and 20 years from now.
 - To cover at least the construction costs, the CFO needs to invest some of the company's money to meet future cash-flow needs.
@@ -33,6 +33,8 @@ $x_{2}$ = the number of investments in Asset 2
 
 $x_{3}$ = the number of investments in Asset 3
 
+LP formulation
+
 $Min z = x_{1} + x_{2} + x_{3}$
     
 subject to
@@ -42,6 +44,8 @@ $2x_{1}     +    x_{2} + 0.5x_{3} \ge 400$
 $20.5x_{1}  + 0.5x_{2} +    x_{3} \ge 100$
 
 $             1.5x_{2} +   2x_{3} \ge 300$
+
+$x_{1},x_{2},x_{3} \ge 0
 
 Using excel solver,
 ![Picture](/assets/LPimages/Q1invest2.png)
