@@ -22,12 +22,15 @@ consumeraffairs.com, a website that empowers consumers by providing a forum for 
 The data is extracted using DataMiner, a Google chrome extension that can scrape data form web pages into a CSV file.
 
 Recipes created to extract data from both websites:
+
 ![Picture](/assets/textimages/Q3text.png)
 
-Here is example of one review from trustpilot
+Here is example of one review from trustpilot:
+
 ![Picture](/assets/textimages/review1.png)
 
-Here is example of one review from trustpilot
+Here is example of one review from trustpilot:
+
 ![Picture](/assets/textimages/review2.png)
 
 The table below shows the data being extracted
@@ -58,7 +61,8 @@ Example after cleaning:
 
 With a clean corpus, a term document matric (TDM) which consists of the words used in the text and their frequecies.Therefore, we can see which are the most frequent words.
 
-**Bar plot with the 20 top frequent words.**
+**Bar plot with the 20 top frequent words.**:
+
 ![Picture](/assets/textimages/barplot1.png)
 
 
@@ -71,6 +75,7 @@ A word cloud can also be generated to visualize the frequently used words.
 
 
 Here is the word cloud:
+
 ![Picture](/assets/textimages/wordcloud.png)
 
 **Insights:**
