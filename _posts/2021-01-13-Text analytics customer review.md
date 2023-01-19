@@ -48,13 +48,16 @@ The reviews are converted into a collection of text documents or know as "Corpus
         >#Creating the corpus
         > docs1 <- Corpus(VectorSource(sephoradata$Text))
 
-A set of pre-processing is performed on the corpus as following
+A set of pre-processing is performed on the corpus as following:
+
 ![Picture](/assets/textimages/clean.png)
 
 Example before cleaning:
+
 ![Picture](/assets/textimages/before.png)
 
 Example after cleaning: 
+
 ![Picture](/assets/textimages/after.png)
 
 ### Bag of words
@@ -89,6 +92,7 @@ From the plot and word cloud, we can draw some insights.
 #### Word clustering
 
 Word clustering is used to identify word groups used together, based on frequency distance.This is a dimension reduction technique. It helps in grouping words into related clusters. Word clusters are visualized with dendrograms as shown below:
+
 ![Picture](/assets/textimages/dendrogram.png)
 
 
@@ -114,6 +118,7 @@ Before performing inner join, a tidy element of Sephora reviews is created by us
 **Bing sentiment lexicon**
 
 A small section of joining Sephora reviews and the bing sentiment lexicon is shown below:
+
 ![Picture](/assets/textimages/bing.png)
 
 **Insights:**
@@ -121,6 +126,7 @@ A small section of joining Sephora reviews and the bing sentiment lexicon is sho
 We can observe that the word amazing appear 17 times in 1 review of Sephora. Besides knowing the number of reviews which shows the word and the frequency of the word in the dataset, we can also know the classification of the word as positive or negative by using the bing sentiment dictionary. We also found that abusive, abysmal and accusing that appeared in the dataset are classified as negative word while the other are classified as positive word.
 
 The top 10 words which have the highest frequency in negative and positive is shown below:
+
 ![Picture](/assets/textimages/bingbar.png)
 
 **Insights:**
@@ -130,10 +136,12 @@ we can observe that the frequency of the positive words is slightly higher than 
 **NRC sentiment lexicon**
 
 The frequency of frequent NRC sentiment lexicon used in the reviews of Sephora is shown below:
+
 ![Picture](/assets/textimages/NRCbar.png)
 
 
 The 50 most commonly used words the emotions of NRC sentiment is shown below:
+
 ![Picture](/assets/textimages/NRCcloud.png)
 
 **Insights:**
@@ -159,6 +167,7 @@ The most significant features are identified as below:
 For each feature, we determine in which document it is present and determine whether the feature is dicussed with positive or negative sentiment.
 
 The percentage of positive and negative in each feature is shown below:
+
 ![Picture](/assets/textimages/feature.png)
 
 **Insights:**
@@ -167,6 +176,7 @@ We noticed that all features have a percentage of positive comments above
 50%. The greatest satisfaction of consumers is on the time which reach about 60% of positive comments.
 
 The total number of positive/negative sentimens for each feature is shown below:
+
 ![Picture](/assets/textimages/feature2.png)
 
 **Insights:**
@@ -174,6 +184,7 @@ The total number of positive/negative sentimens for each feature is shown below:
 The best ratio between the total number of words/positive words lies with the order and time, which we can certainly identify as two elements of the brand's strength.
 
 Using the AFFIN lexicon, a treemap is generated to see which feature has the highest score as shown below:
+
 ![Picture](/assets/textimages/feature3.png)
 
 **Insights:**
@@ -181,7 +192,8 @@ Using the AFFIN lexicon, a treemap is generated to see which feature has the hig
 The feature with best positive score is Time followed by Order. The
 worst is Email. (the darker green components are those with the highest score). Notice that Email has a lower score. Even predominance of terms related to these elements is positive, it can be a warning signal.
 
-Therefore, it is necessary to inspect the main problems related to Email. By selecting only the negative words for each feature. A facet bar chart is plot with negative words for each feature as shown below
+Therefore, it is necessary to inspect the main problems related to Email. By selecting only the negative words for each feature. A facet bar chart is plot with negative words for each feature as shown below:
+
 ![Picture](/assets/textimages/feature4.png)
 
 
@@ -194,6 +206,7 @@ There are many “wrong” words appears for shipping and service. Sephora shoul
 ### Comparison between Sephora and Ulta
 
 By joining the Sephora and Ulta reviews with the AFFIN lexicon, a density plot of AFFIN scores of the Sephora and Ulta is as shown below:
+
 ![Picture](/assets/textimages/density.png)
 
 **Insights:**
@@ -202,6 +215,7 @@ From the density plot, we observe there is a clear difference in the AFINN score
 
 
 A radar chart is plotted to display the amount of word for several groups of emotion defined in NRC sentiment lexicon. The variation of different emotions found in the reviews of Sephora and Ulta can be shown clearly in radar chart below and thus make the comparison of the sentiment analysis between Sephora and Ulta become efficient and easy.
+
 ![Picture](/assets/textimages/radar.png)
 
 **Insights:**
@@ -210,6 +224,7 @@ We observe that the customer’s emotion towards both Sephora and Ulta has the s
 words with joy and surprise emotion. Although Sephora obtain a higher value for positive words, we observe that the value of negative words with disgust and fear emotion are higher as compared to Ulta. Both Sephora and Ulta have almost the same value for the sad word.
 
 The frequency of the appearance of common words in Sephora and Ulta is compared by plotting a pyramid plot as shown below:
+
 ![Picture](/assets/textimages/pyramid.png)
 
 **Insights:**
@@ -218,6 +233,7 @@ We observe that both Sephora and Ulta obtain the highest frequency for the word 
 word as compared to Ulta. Besides, we also found some interesting keyword in the datasets such as variety, error, gift and samples. We found that the word variety and the word gift mentioned more frequent in Ulta reviews as compared to Sephora. This probably because Ulta marketing strategy is providing a variety of product and abundant gift to attract customers. The word samples has a high frequency as compared to the word gift in Sephora instead show that Sephora more focus on giving samples as compared to gift. Besides, the error word is mentioned significant frequent in Sephora’s reviews as compared to Ulta showed that more customers complain about the errors that have made by Sephora as compared to Ulta.
 
 A comparison cloud between Sephora and Ulta is generated to show the disjunction between the two corpora.
+
 ![Picture](/assets/textimages/comparecloud.png)
 
 **Insights:**

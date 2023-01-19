@@ -21,7 +21,7 @@ timezone: Asia/Kuala_Lumpur
 
 title: Aggy's portfolio                        # the main title
 
-tagline: Collection of works I have done and things I have learnt   # it will display as the sub-title
+tagline: Collection of works I have done and things I have learnt. Want to know more about me, go to About!   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
