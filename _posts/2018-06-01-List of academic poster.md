@@ -27,3 +27,4 @@ Title: Solving the multi-objective menu planning problem using non-dominated sor
 
 ### Machine learning class poster
 
+![Picture](/assets/poster/FYP.png)
