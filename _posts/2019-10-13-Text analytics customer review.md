@@ -1,6 +1,6 @@
 ---
 title: Text analytics - Sentiment analysis customer review
-date: 2021-01-13
+date: 2019-10-13
 categories: [Assignment]
 math: true
 ---

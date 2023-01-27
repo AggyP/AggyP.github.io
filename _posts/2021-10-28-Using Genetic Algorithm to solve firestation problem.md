@@ -1,11 +1,9 @@
 ---
-title: Using Genetic Algorithm to solve Firestation Problem 
+title: Using Genetic Algorithm to solve firestation problem 
 date: 2021-10-28
 categories: [Assignment]
 math: true
 ---
-
-
 
 **Programming Tool** - Python
 

@@ -1,6 +1,6 @@
 ---
-title: Linear Programing - Worker schedule Problem 
-date: 2021-02-01
+title: Linear Programing - Worker schedule problem 
+date: 2018-05-01
 categories: [Assignment]
 math: true
 ---

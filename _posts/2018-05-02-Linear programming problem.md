@@ -1,6 +1,6 @@
 ---
-title: Linear Programing - Investment Problem 
-date: 2021-03-15
+title: Linear Programing - Investment problem 
+date: 2018-05-02
 categories: [Assignment]
 math: true
 ---
