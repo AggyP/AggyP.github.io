@@ -33,8 +33,8 @@ url: 'https://github.com/AggyP'
 github:
   username: AggyP           # change to your github username
 
-twitter:
-  username: twitter_username            # change to your twitter username
+#linkedin:
+#  username: https://www.linkedin.com/in/phang18aggy/           # change to your twitter username
 
 social:
   # Change to your full name.
@@ -43,11 +43,12 @@ social:
   email: ychi_0823@hotmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://www.linkedin.com/in/phang18aggy/
+    # https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/AggyP       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    
 
 google_site_verification:               # fill in to your verification string
 
@@ -82,7 +83,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: '/assets/profilepic/me2.jpg'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
