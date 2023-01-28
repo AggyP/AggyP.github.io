@@ -1,7 +1,7 @@
 ---
 title: Linear Programing - Investment problem 
 date: 2018-05-02
-categories: [Assignment]
+categories: [Optimization]
 math: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Linear Programing - Worker schedule problem 
 date: 2018-05-01
-categories: [Assignment]
+categories: [Optimization]
 math: true
 ---
 

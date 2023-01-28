@@ -1,7 +1,7 @@
 ---
 title: Text analytics - Sentiment analysis customer review
 date: 2019-10-13
-categories: [Assignment]
+categories: [Text mining]
 math: true
 ---
 
