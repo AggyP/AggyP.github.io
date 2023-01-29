@@ -19,20 +19,15 @@ The district council has limited fund and the council wants to build the minimum
 
 ### List of variables
 
-
-
-
-The goal of this assignment is to determine the minimum fire stations to be built in order to serve all the towns such that the driving time between town is less or equal than the maximum driving times. The objective (1) is to minimize the number of fire station built. Constraint (2) and (3) are to ensure at least one town built with fire station is within a specific driving times of each town.
-
+![Picture](/assets/LPimages/Q3Var.png)
 
 ### Problem formulation
 
-$Min Z  \sum_{i=1}^m x_i$
+The goal of this assignment is to determine the minimum fire stations to be built in order to serve all the towns such that the driving time between town is less or equal than the maximum driving times. The objective (1) is to minimize the number of fire station built. Constraint (2) and (3) are to ensure at least one town built with fire station is within a specific driving times of each town.
 
-$S_{j} = {d_{ij}|d_{ij} \le D}$
+The problem is formulated in a linear programming:
 
-
-
+![Picture](/assets/LPimages/Q3formula.png)
 
 ### Representation
 
@@ -44,7 +39,7 @@ Here is an example of binary representation chromosome:
 
 ## Methodology
 
-Since the problem to be solved involve a large search place as we have 42 towns so we need to search through all 242 . Therefore, Genetic algorithm (GA) is used to solve the set covering problem.
+Since the problem to be solved involve a large search place as we have 42 towns so we need to search through all 2<sup>42</sup> . Therefore, Genetic algorithm (GA) is used to solve the set covering problem.
 
 ### Import dataset
 
@@ -60,8 +55,6 @@ First the dataset of each driving time between towns is imported and a 42x42 cov
 ![Picture](/assets/LPimages/Q3import.png)
 
 
-
-
 ### Initialization
 
 The individual solution is generated randomly with value 0 and 1.
@@ -72,6 +65,18 @@ Here is the figure to illustrate this more clearly showing an example of a rando
 
 
  Since the randomly generated solution has all 0 for town 2, 4, 6, and 10. It is not feasible because town 1 could not be covered so the value 1 will be put randomly on either 2, 4, 6 or 10. So the value 1 is put on gene no 4 in this example.
+
+Here is the code:
+
+        def populations(popsize,chromosome_length,times):
+        population=([[random.randint(0,1) for x in range(chromosome_length)] for i in range(popsize)])
+        population = np.array(population)
+        #constraint to ensure at least 1 town
+        for i in range (popsize):
+            for j in range(chromosome_length):
+                arrivetown = times[times[j=1]==1].index.tolist()
+                population[i][random.choice(arrivetown)]=1
+        return population
 
 ### Fitness calculation
 
@@ -100,9 +105,66 @@ Here is the figure to illustrate this more clearly showing an example of a rando
             objvalue+=penalty
             fitness.append(objvalue)
 
+Here is the overall code:
+
+        def fitnessCal(chromosome,times):
+            firestation=[]
+            fitness=[]
+
+            for population in range (chromosome.shape[0]):
+                firestation.append([])
+                objvalue=0
+                for gene in range (chromosome.shape[1]):
+                    if chromosome[population,gene]==1:
+                        objvalue = objvalue+1
+                        for d in range(len(times)):
+                            if times.iloc[d,gene]==1:
+                                firestation[population].append(d)
+                            else:
+                                continue
+                    else:
+                        continue
+                #if there are repetitive town penalty will be imposed
+                penalty = 0
+                penalty += (len(firestation[population]) - len(set(firestation[population])))
+                objvalue += penalty
+
+                #if there is at least one town not covered penalty of 10 will be imposed
+                if len(set(firestation[population])) ==42:
+                    penalty +=0
+                    objvalue+=penalty
+                    fitness.append(objvalue)
+                else:
+                    penalty+=10
+                    objvalue+=penalty
+                    fitness.append(objvalue)
+            return fitness
+
 ### Selection
 
 Two parent chromosomes are selected from the best of two randomly selected chromosomes in the population N = 10 to perform crossover and produce two child chromosomes. The child chromosomes will be added to the populations and the new population now has N = 20 solutions and are sorted in ascending order. The new population will then pick the first 10 solutions which is the best 10 solutions with the minimum objective value as a new population. Since our objective is to minimize the objective function.
+
+Here is the code:
+
+        def parent_selection(population,scores):
+            #Get population size
+            population_size = len(scores)
+
+            #Pick individuals for tournament
+            sol_1 = random.randint(0,population_size-1)
+            sol_2 = random.randint(0,population_size-1)
+
+            #Get fitness score for each
+            sol_1_fitness = scores[sol_1]
+            sol_2_fitness = scores[sol_2]
+
+            #Identify individual with highest fitness
+            if sol_1_fitness >= sol_2_fitness:
+                winner = sol_1
+            else:
+                winner = sol_2
+            #Return the chromosome of the winner
+            return population[winner,:]
 
 ### Crossover
 
@@ -112,6 +174,19 @@ This is an example of single point crossover:
 
 ![Picture](/assets/LPimages/Q3cross.png)
 
+Here is the code: 
+
+        def crossover(parent_1,parent_2):
+            #Get length of chromosome
+            chromosome_length = len(parent_1)
+
+            #Pick crossover point, avoiding ends of chromosome
+            crossover_point = random.randint(1,chromosome_length-1)
+
+            #Create children 
+            child_1 = np.hstack((parent_1[0:crossover_point],parent_2[crossover_point:]))
+            child_2 = np.hstack((parent_2[0:crossover_point],parent_1[crossover_point:]))
+            return child_1, child_2
 
 In uniform crossover if the random value is less than 0.5, the gene is copy from parent 1 whereas if the random value is equal or greater than 0.5, gene is copy from parent 2.
 
@@ -119,6 +194,18 @@ This is an example of uniform point crossover:
 
 ![Picture](/assets/LPimages/Q3cross2.png)
 
+Here is the code: 
+
+        def crossover(parent_1,parent_2):
+            P = np.random.rand(len(parent_1))
+            for i in range (len(P)):
+                if P[i] < 0.5:
+                    temp = parent_1[i]
+                    parent_1[i] = parent_2[i]
+                    parent_2[i] = temp
+            child_1 = np.array(parent_1)
+            child_2 = np.array(parent_2)
+            return child_1, child_2
 
 ### Mutation
 Mutation step is performed on randomly alter selected genes. Single point bit flip mutation is used. Thus, one bit is selected and then flip it. If the selected bit is 0 then turn it to 1 and if the selected bit is 1 then turn it to 0.
@@ -127,6 +214,19 @@ Here is an example of mutation of a chromosome:
 
 ![Picture](/assets/LPimages/Q3mutation.png)
 
+Here is the code:
+
+        def mutation(chromosomes,pm):
+            for i in range(chromosomes.shape[0]):
+                if(random.random()<pm):
+                    int_random_value = random.randint(0,chromosomes.shape[1]-1)
+                    if chromosomes[i,int_random_value] == 0:
+                        chromosomes[i,int_random_value] = 1
+                    else:
+                        chromosomes[i,int_random_value] = 0
+                else:
+                    continue
+            return chromosomes
 
 ### Termination
 

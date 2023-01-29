@@ -23,7 +23,15 @@ math: true
 
 ![Picture](/assets/poster/CSPC.png)
 
-### **2019 FYP poster competition**
+### **2019 2 minute poster Computer Science Master Innovation and Demo**
+
+**Title:** Text Mining on Social Media to explore Health-related Concerns among Thalassemia Patients and their Caregivers using Topic Modelling.
+
+**Award:** 1st runner up
+
+![Picture](/assets/poster/master1.png)
+
+### **2018 FYP poster competition**
 
 **Title:** Solving the multi-objective menu planning problem using non-dominated sorting genetic algorithm II.
 
@@ -31,6 +39,6 @@ math: true
 
 ![Picture](/assets/poster/FYP.png)
 
-### **Machine learning class poster**
+### **2019 Machine learning class poster**
 
-![Picture](/assets/poster/FYP.png)
+![Picture](/assets/poster/ML.png)
