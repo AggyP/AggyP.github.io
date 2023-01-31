@@ -10,7 +10,7 @@ math: true
 
 **Title:** A multi-objective tasks scheduling for IoT applications in the edge-cloud computing.
 
-**Award:** Top 20 
+**Award:** Honourable mention award
 
 ![Picture](/assets/poster/NP2C.png)
 
