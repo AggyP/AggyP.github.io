@@ -5,7 +5,7 @@ categories: [Predictive analytics]
 math: true
 ---
 
-**Tool** - Rapid Miner, R programming, Gephi
+**Tool** - R programming, Gephi
 
 **Technique** - Market basket analysis
 
@@ -47,7 +47,7 @@ A two-key plot is used to illustrate the association rules as belows:
 
 ![Picture](/assets/mba/2key.png)
 
-Colour of each point indicates the number of items included in the rule. Generally, higher order tends to have lower support. However, there are some high-order rules which have greater support than some low-order rules.Table belows summarises these rules.
+Colour of each point indicates the number of items included in the rule. Generally, higher order tends to have lower support. However, there are some high-order rules which have greater support than some low-order rules.Table belows summarises these rules:
 
 ![Picture](/assets/mba/table2.png)
 

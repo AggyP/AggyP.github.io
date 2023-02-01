@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![Picture](/assets/profilepic/me3.png){: width="972" height="400" .w-50 .left}Hi I am Aggy, I am a Data Scientist. Graduated with a bachelor degree of applied mathematics(Operational research) and a master degree of Data Science & Analytics in Universiti Sains Malaysia. I got an offer for PhD in computational intelligence, but for some reasons I didn't continue. Anyhow I learnt a lot from my academic and industry supervisors. In my current work, I worked with agriculture related data to identify insights and develop model for prediction and forecasting. Sometimes, I use Powerbi to create visualization and dashboard. I also implemented agile methodology to manage my team and projects. I enjoy seeing the outcome of my effort.
+![Picture](/assets/profilepic/me3.png){: width="972" height="400" .w-50 .left}Hi I am Aggy, I am a Data Scientist. Graduated with a bachelor degree of applied mathematics(Operational research) and a master degree of Data Science & Analytics in Universiti Sains Malaysia. I got an offer for PhD in computational intelligence and worked as a teaching assistant to assist my supervisor in class and his master student. In my current work, I worked with agriculture related data to identify insights and develop model for prediction and forecasting. Sometimes, I use Powerbi to create visualization and dashboard. I also implemented agile methodology to manage my team and projects. I enjoy seeing the outcome of my effort.
  
 Other than doing analysis, I am fitness enthusiast, passionate on doing various kind of exercise to build my stamina, strength, and endurance. I love doing HIIT, circuit training, muay thai, and yoga.
 
